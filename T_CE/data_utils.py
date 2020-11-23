@@ -5,25 +5,22 @@ from copy import deepcopy
 import random
 import torch.utils.data as data
 
-import config
 
+def load_all(dataset, data_path):
 
-def load_all(dataset):
+	train_rating = data_path + '{}.train.rating'.format(dataset)
+	valid_rating = data_path + '{}.valid.rating'.format(dataset)
+	test_negative = data_path + '{}.test.negative'.format(dataset)
 
-	################# load training data #################
+	################# load training data #################	
 	train_data = pd.read_csv(
-		config.train_rating, 
+		train_rating, 
 		sep='\t', header=None, names=['user', 'item', 'noisy'], 
 		usecols=[0, 1, 2], dtype={0: np.int32, 1: np.int32, 2: np.int32})
 
-	# user_num = train_data['user'].max() + 1
-	# item_num = train_data['item'].max() + 1
-	if dataset == "Adressa-1w":
+	if dataset == "adressa":
 		user_num = 212231
 		item_num = 6596
-	elif dataset == 'ml-1m':
-		user_num = 6040
-		item_num = 3952
 	else:
 		user_num = train_data['user'].max() + 1
 		item_num = train_data['item'].max() + 1
@@ -42,7 +39,7 @@ def load_all(dataset):
 
 	################# load validation data #################
 	valid_data = pd.read_csv(
-		config.valid_rating, 
+		valid_rating, 
 		sep='\t', header=None, names=['user', 'item', 'noisy'], 
 		usecols=[0, 1, 2], dtype={0: np.int32, 1: np.int32, 2: np.int32})
 	valid_data = valid_data.values.tolist()
@@ -50,11 +47,6 @@ def load_all(dataset):
 	for x in valid_data:
 		valid_data_list.append([x[0], x[1]])
 	
-	# all_train_mat = sp.dok_matrix((user_num, item_num), dtype=np.float32)
-	# for x in train_data_list:
-	# 	all_train_mat[x[0], x[1]] = 1.0
-	# for x in valid_data_list:
-	# 	all_train_mat[x[0], x[1]] = 1.0
 	user_pos = {}
 	for x in train_data_list:
 		if x[0] in user_pos:
@@ -72,11 +64,11 @@ def load_all(dataset):
 	test_mat = sp.dok_matrix((user_num, item_num), dtype=np.float32)
 
 	test_data_pos = {}
-	with open(config.test_negative, 'r') as fd:
+	with open(test_negative, 'r') as fd:
 		line = fd.readline()
 		while line != None and line != '':
 			arr = line.split('\t')
-			if dataset == "Adressa-1w":
+			if dataset == "adressa":
 				u = eval(arr[0])[0]
 				i = eval(arr[0])[1]
 			else:
@@ -88,16 +80,6 @@ def load_all(dataset):
 				test_data_pos[u] = [i]
 			test_mat[u, i] = 1.0
 			line = fd.readline()
-
-	# test_data_mask = {}
-	# for u in test_data_pos:
-	# 	mask = []
-	# 	for i in range(item_num):
-	# 		if (u, i) in all_train_mat:
-	# 			mask.append(-9999)
-	# 		else:
-	# 			mask.append(0)
-	# 	test_data_mask[u] = mask
 
 
 	return train_data_list, valid_data_list, test_data_pos, user_pos, user_num, item_num, train_mat, train_data_noisy

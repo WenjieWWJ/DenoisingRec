@@ -20,7 +20,6 @@ main_path = '../amazon_book/data/'
 train_rating = main_path + '{}.train.rating'.format(dataset)
 valid_rating = main_path + '{}.valid.rating'.format(dataset)
 test_negative = main_path + '{}.test.negative'.format(dataset)
-user_neg = root_path + '{}.user_neg'.format(dataset)
 
 # save path
 model_path = './models/amazon_book/'

@@ -2,37 +2,6 @@ import numpy as np
 import torch
 import math
 
-# def hit(gt_item, pred_items):
-#     if gt_item in pred_items:
-#         return 1
-#     return 0
-
-
-# def ndcg(gt_item, pred_items):
-#     if gt_item in pred_items:
-#         index = pred_items.index(gt_item)
-#         return np.reciprocal(np.log2(index+2))
-#     return 0
-
-
-# def metrics(model, test_loader, top_k):
-#     HR, NDCG = [], []
-
-#     for user, item, label, _ in test_loader:
-#         user = user.cuda()
-#         item = item.cuda()
-
-#         predictions = model(user, item)
-#         _, indices = torch.topk(predictions, top_k)
-#         recommends = torch.take(
-#                 item, indices).cpu().numpy().tolist()
-
-#         gt_item = item[0].item()
-#         HR.append(hit(gt_item, recommends))
-#         NDCG.append(ndcg(gt_item, recommends))
-
-#     return np.mean(HR), np.mean(NDCG)
-
 
 
 def test_all_users(model, batch_size, item_num, test_data_pos, user_pos, top_k):
@@ -65,10 +34,10 @@ def test_all_users(model, batch_size, item_num, test_data_pos, user_pos, top_k):
         indices = indices.cpu().numpy().tolist()
         predictedIndices.append(indices)
         GroundTruth.append(test_data_pos[u])
-    precision, recall, NDCG, MRR = computeTopNAccuracy(GroundTruth, predictedIndices, top_k)
+    precision, recall, NDCG, MRR = compute_acc(GroundTruth, predictedIndices, top_k)
     return precision, recall, NDCG, MRR
     
-def computeTopNAccuracy(GroundTruth, predictedIndices, topN):
+def compute_acc(GroundTruth, predictedIndices, topN):
     precision = [] 
     recall = [] 
     NDCG = [] 
