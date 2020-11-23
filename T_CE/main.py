@@ -205,7 +205,7 @@ for epoch in range(args.epochs):
 
 		model.zero_grad()
 		prediction = model(user, item)
-		loss = loss_function(prediction, label, drop_rate_schedule(count), flip_rate_schedule(count), noisy_or_not)
+		loss = loss_function(prediction, label, drop_rate_schedule(count))
 		loss.backward()
 		optimizer.step()
 
