@@ -166,7 +166,7 @@ def eval(model, valid_loader, best_loss, count):
 		label = label.float().cuda()
 
 		prediction = model(user, item)
-		loss, _, _ = loss_function(prediction, label, drop_rate_schedule(count))
+		loss, = loss_function(prediction, label, drop_rate_schedule(count))
 		epoch_loss += loss.detach()
 	print("################### EVAL ######################")
 	print("Eval loss:{}".format(epoch_loss))
