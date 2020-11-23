@@ -1,0 +1,122 @@
+arguments: Namespace(alpha=0.25, batch_size=1024, dropout=0.0, epochs=10, eval_freq=2000, exponent=1, factor_num=32, gpu='1', lr=0.001, num_layers=3, num_ng=1, out=True, top_k=[3, 20, 50, 100]) 
+config model NeuMF-end
+config path ../amazon/data_coteaching/
+config dataset amazon_book
+user, item num
+80464 98663
+data loaded! user_num:80464, item_num:98663 train_data_len:2714021 test_user_num:80349
+/home/w/wenjie/anaconda3/lib/python3.7/site-packages/torch/nn/_reduction.py:43: UserWarning: size_average and reduce args will be deprecated, please use reduction='none' instead.
+  warnings.warn(warning.format(ret))
+epoch: 0, iter: 2000, loss:0.471785306930542
+################### EVAL ######################
+Eval loss:318.5689697265625
+/home/w/wenjie/anaconda3/lib/python3.7/site-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type NCF. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/home/w/wenjie/anaconda3/lib/python3.7/site-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Embedding. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/home/w/wenjie/anaconda3/lib/python3.7/site-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Sequential. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/home/w/wenjie/anaconda3/lib/python3.7/site-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Dropout. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/home/w/wenjie/anaconda3/lib/python3.7/site-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/home/w/wenjie/anaconda3/lib/python3.7/site-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type ReLU. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+### Saved model... Best validation loss:318.5689697265625
+epoch: 0, iter: 4000, loss:0.39150968194007874
+################### EVAL ######################
+Eval loss:257.61712646484375
+### Saved model... Best validation loss:257.61712646484375
+epoch: 1, iter: 6000, loss:0.2638492286205292
+################### EVAL ######################
+Eval loss:205.11387634277344
+### Saved model... Best validation loss:205.11387634277344
+epoch: 1, iter: 8000, loss:0.23884184658527374
+################### EVAL ######################
+Eval loss:175.9659881591797
+### Saved model... Best validation loss:175.9659881591797
+epoch: 1, iter: 10000, loss:0.19957393407821655
+################### EVAL ######################
+Eval loss:159.5625457763672
+### Saved model... Best validation loss:159.5625457763672
+epoch: 2, iter: 12000, loss:0.1500454694032669
+################### EVAL ######################
+Eval loss:151.99282836914062
+### Saved model... Best validation loss:151.99282836914062
+epoch: 2, iter: 14000, loss:0.15910765528678894
+################### EVAL ######################
+Eval loss:146.01490783691406
+### Saved model... Best validation loss:146.01490783691406
+epoch: 3, iter: 16000, loss:0.12685734033584595
+################### EVAL ######################
+Eval loss:145.95034790039062
+### Saved model... Best validation loss:145.95034790039062
+epoch: 3, iter: 18000, loss:0.1105717122554779
+################### EVAL ######################
+Eval loss:142.3299560546875
+### Saved model... Best validation loss:142.3299560546875
+epoch: 3, iter: 20000, loss:0.11385176330804825
+################### EVAL ######################
+Eval loss:138.80960083007812
+### Saved model... Best validation loss:138.80960083007812
+epoch: 4, iter: 22000, loss:0.0950944721698761
+################### EVAL ######################
+Eval loss:148.16653442382812
+epoch: 4, iter: 24000, loss:0.08394664525985718
+################### EVAL ######################
+Eval loss:141.69973754882812
+epoch: 4, iter: 26000, loss:0.10872843861579895
+################### EVAL ######################
+Eval loss:139.45809936523438
+epoch: 5, iter: 28000, loss:0.0704265907406807
+################### EVAL ######################
+Eval loss:147.77816772460938
+epoch: 5, iter: 30000, loss:0.0653647780418396
+################### EVAL ######################
+Eval loss:141.82302856445312
+epoch: 6, iter: 32000, loss:0.05934442579746246
+################### EVAL ######################
+Eval loss:152.8649139404297
+epoch: 6, iter: 34000, loss:0.054591402411460876
+################### EVAL ######################
+Eval loss:144.01998901367188
+epoch: 6, iter: 36000, loss:0.0510956346988678
+################### EVAL ######################
+Eval loss:135.65585327148438
+### Saved model... Best validation loss:135.65585327148438
+epoch: 7, iter: 38000, loss:0.04554515331983566
+################### EVAL ######################
+Eval loss:148.7541046142578
+epoch: 7, iter: 40000, loss:0.04143243283033371
+################### EVAL ######################
+Eval loss:139.18948364257812
+epoch: 7, iter: 42000, loss:0.058260831981897354
+################### EVAL ######################
+Eval loss:137.73403930664062
+epoch: 8, iter: 44000, loss:0.04106621444225311
+################### EVAL ######################
+Eval loss:142.6523895263672
+epoch: 8, iter: 46000, loss:0.039168208837509155
+################### EVAL ######################
+Eval loss:138.34263610839844
+epoch: 9, iter: 48000, loss:0.03859809413552284
+################### EVAL ######################
+Eval loss:147.73773193359375
+epoch: 9, iter: 50000, loss:0.03563617169857025
+################### EVAL ######################
+Eval loss:139.28237915039062
+epoch: 9, iter: 52000, loss:0.0386444628238678
+################### EVAL ######################
+Eval loss:138.47711181640625
+############################## Training End. ##############################
+################### TEST ######################
+Precision 0.0077-0.0056-0.0045-0.0037
+recall 0.0075-0.0340-0.0670-0.1092
+NDCG 0.0095-0.0180-0.0266-0.0358
+MRR 0.0143-0.0226-0.0249-0.0261
+############################## Training End. ##############################
+################### TEST ######################
+Precision 0.0073-0.0052-0.0042-0.0035
+recall 0.0068-0.0314-0.0628-0.1018
+NDCG 0.0089-0.0167-0.0248-0.0334
+MRR 0.0136-0.0212-0.0235-0.0246
