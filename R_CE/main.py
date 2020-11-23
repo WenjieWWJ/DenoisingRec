@@ -43,7 +43,7 @@ parser.add_argument("--batch_size",
 	help="batch size for training")
 parser.add_argument("--epochs", 
 	type=int,
-	default=20,
+	default=10,
 	help="training epoches")
 parser.add_argument("--eval_freq", 
 	type=int,

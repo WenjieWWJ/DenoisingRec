@@ -31,8 +31,8 @@ parser.add_argument('--drop_rate',
 	default = 0.2)
 parser.add_argument('--num_gradual', 
 	type = int, 
-	default = 100000,
-	help='how many epochs for linear drop rate {5, 10, 15}')
+	default = 30000,
+	help='how many epochs to linearly increase drop_rate')
 parser.add_argument('--exponent', 
 	type = float, 
 	default = 1, 
@@ -51,7 +51,7 @@ parser.add_argument("--batch_size",
 	help="batch size for training")
 parser.add_argument("--epochs", 
 	type=int,
-	default=20,
+	default=10,
 	help="training epoches")
 parser.add_argument("--eval_freq", 
 	type=int,
