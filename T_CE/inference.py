@@ -36,10 +36,6 @@ parser.add_argument("--top_k",
 	type=list, 
 	default=[50, 100],
 	help="compute metrics@top_k")
-parser.add_argument("--test_num_ng", 
-	type=int,
-	default=999, 
-	help="sample part of negative items for testing")
 parser.add_argument("--gpu", 
 	type=str,
 	default="1",  
