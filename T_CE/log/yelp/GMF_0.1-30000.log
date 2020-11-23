@@ -1,0 +1,7 @@
+arguments: Namespace(batch_size=1024, dataset='yelp', drop_rate=0.1, dropout=0.0, epochs=20, eval_freq=2000, exponent=1, factor_num=32, gpu='1', lr=0.001, model='GMF', num_gradual=30000, num_layers=3, num_ng=1, out=True, top_k=[3, 20, 50, 100]) 
+config model GMF
+config data path ../data/yelp/
+config model path ./models/yelp/
+user, item num
+45548 57396
+data loaded! user_num:45548, item_num:57396 train_data_len:1672520 test_user_num:45525
