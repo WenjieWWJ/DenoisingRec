@@ -1,0 +1,61 @@
+arguments: Namespace(batch_size=1024, dataset='yelp', drop_rate=0.0, dropout=0.0, epochs=10, eval_freq=2000, exponent=1, factor_num=32, gpu='5', lr=0.001, model='GMF', num_gradual=0, num_layers=3, num_ng=1, out=True, top_k=[50, 100]) 
+config model GMF
+config data path ../data/yelp/
+config model path ./models/yelp/
+user, item num
+45548 57396
+data loaded! user_num:45548, item_num:57396 train_data_len:1672520 test_user_num:45525
+/storage/wjwang/anaconda3/lib/python3.7/site-packages/torch/nn/_reduction.py:43: UserWarning: size_average and reduce args will be deprecated, please use reduction='none' instead.
+  warnings.warn(warning.format(ret))
+epoch: 0, iter: 2000, loss:0.472456693649292
+################### EVAL ######################
+Eval loss:190.38169860839844
+epoch: 1, iter: 4000, loss:0.2909187972545624
+################### EVAL ######################
+Eval loss:132.66661071777344
+epoch: 1, iter: 6000, loss:0.28047555685043335
+################### EVAL ######################
+Eval loss:116.32193756103516
+epoch: 2, iter: 8000, loss:0.20009981095790863
+################### EVAL ######################
+Eval loss:109.43667602539062
+epoch: 3, iter: 10000, loss:0.18971726298332214
+################### EVAL ######################
+Eval loss:105.33560943603516
+epoch: 3, iter: 12000, loss:0.21793395280838013
+################### EVAL ######################
+Eval loss:103.1695785522461
+epoch: 4, iter: 14000, loss:0.21310493350028992
+################### EVAL ######################
+Eval loss:102.624267578125
+epoch: 4, iter: 16000, loss:0.2023875117301941
+################### EVAL ######################
+Eval loss:101.8905258178711
+epoch: 5, iter: 18000, loss:0.18023379147052765
+################### EVAL ######################
+Eval loss:103.414794921875
+epoch: 6, iter: 20000, loss:0.15110653638839722
+################### EVAL ######################
+Eval loss:105.25263214111328
+epoch: 6, iter: 22000, loss:0.14915846288204193
+################### EVAL ######################
+Eval loss:105.21730041503906
+epoch: 7, iter: 24000, loss:0.17434903979301453
+################### EVAL ######################
+Eval loss:108.65621185302734
+epoch: 7, iter: 26000, loss:0.1572551131248474
+################### EVAL ######################
+Eval loss:107.98953247070312
+epoch: 8, iter: 28000, loss:0.14360462129116058
+################### EVAL ######################
+Eval loss:111.82645416259766
+epoch: 9, iter: 30000, loss:0.1269865185022354
+################### EVAL ######################
+Eval loss:115.30709075927734
+epoch: 9, iter: 32000, loss:0.13072794675827026
+################### EVAL ######################
+Eval loss:116.4933090209961
+############################## Training End. ##############################
+################### TEST ######################
+Recall 0.0840-0.1339
+NDCG 0.0352-0.0465

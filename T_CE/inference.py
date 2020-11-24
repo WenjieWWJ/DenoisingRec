@@ -53,14 +53,7 @@ print("config data path", data_path)
 print("config model path", model_path)
 
 ############################## PREPARE DATASET ##########################
-train_data, test_data, user_num ,item_num, train_mat, user_neg = data_utils.load_all(args.dataset, data_path)
-
-
-test_dataset = data_utils.NCFData(
-		test_data, item_num, train_mat, user_neg, False, 0, False)
-test_loader = data.DataLoader(test_dataset,
-		batch_size=args.test_num_ng+1, shuffle=False, num_workers=0)
-print("data loaded! user_num:{}, item_num:{} test_data_len:{}".format(user_num, item_num, len(test_data)//(args.test_num_ng+1)))
+train_data, valid_data, test_data_pos, user_pos, user_num ,item_num, train_mat, train_data_noisy = data_utils.load_all(args.dataset, data_path)
 
 ########################### CREATE MODEL #################################
 test_model = torch.load('{}{}_{}-{}.pth'.format(model_path, args.model, args.drop_rate, args.num_gradual))
@@ -76,5 +69,4 @@ def test(model, test_data_pos, user_pos):
 	print("NDCG {:.4f}-{:.4f}".format(NDCG[0], NDCG[1]))
 
 test(test_model, test_data_pos, user_pos)
-
 

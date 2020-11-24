@@ -1,0 +1,48 @@
+arguments: Namespace(batch_size=1024, dataset='amazon_book', drop_rate=0.1, dropout=0.0, epochs=10, eval_freq=2000, exponent=1, factor_num=32, gpu='6', lr=0.001, model='NeuMF-end', num_gradual=30000, num_layers=3, num_ng=1, out=True, top_k=[50, 100]) 
+config model NeuMF-end
+config data path ../data/amazon_book/
+config model path ./models/amazon_book/
+user, item num
+80464 98663
+data loaded! user_num:80464, item_num:98663 train_data_len:2714021 test_user_num:80349
+/storage/wjwang/anaconda3/lib/python3.7/site-packages/torch/nn/_reduction.py:43: UserWarning: size_average and reduce args will be deprecated, please use reduction='none' instead.
+  warnings.warn(warning.format(ret))
+epoch: 0, iter: 2000, loss:0.5801441669464111
+################### EVAL ######################
+Eval loss:391.9427185058594
+epoch: 0, iter: 4000, loss:0.471005380153656
+################### EVAL ######################
+Eval loss:315.001220703125
+epoch: 1, iter: 6000, loss:0.32476571202278137
+################### EVAL ######################
+Eval loss:256.681640625
+epoch: 1, iter: 8000, loss:0.3048236668109894
+################### EVAL ######################
+Eval loss:218.54025268554688
+epoch: 1, iter: 10000, loss:0.2240726202726364
+################### EVAL ######################
+Eval loss:192.13522338867188
+epoch: 2, iter: 12000, loss:0.17343555390834808
+################### EVAL ######################
+Eval loss:188.6145477294922
+epoch: 2, iter: 14000, loss:0.17701105773448944
+################### EVAL ######################
+Eval loss:176.28211975097656
+epoch: 3, iter: 16000, loss:0.16238945722579956
+################### EVAL ######################
+Eval loss:188.83184814453125
+epoch: 3, iter: 18000, loss:0.12336331605911255
+################### EVAL ######################
+Eval loss:172.35484313964844
+epoch: 3, iter: 20000, loss:0.11250621825456619
+################### EVAL ######################
+Eval loss:171.5694580078125
+epoch: 4, iter: 22000, loss:0.10621367394924164
+################### EVAL ######################
+Eval loss:194.60276794433594
+epoch: 4, iter: 24000, loss:0.0809592455625534
+################### EVAL ######################
+Eval loss:185.93356323242188
+epoch: 4, iter: 26000, loss:0.11953996866941452
+################### EVAL ######################
+Eval loss:170.9792022705078
