@@ -47,11 +47,11 @@ parser.add_argument("--epochs",
 	help="training epoches")
 parser.add_argument("--eval_freq", 
 	type=int,
-	default=100,
+	default=2000,
 	help="the freq of eval")
 parser.add_argument("--top_k", 
 	type=list,
-	default=[3, 20],
+	default=[50, 100],
 	help="compute metrics@top_k")
 parser.add_argument("--factor_num", 
 	type=int,
