@@ -5,7 +5,7 @@ Adaptive Denoising Training for Recommendation.
 
 This is the pytorch implementation of our paper at WSDM 2021:
 
-> [Denoising Implicit Feedback for Recommendation.](https://arxiv.org/abs/2006.04153)
+> [Denoising Implicit Feedback for Recommendation.](https://arxiv.org/abs/2006.04153)<br>
 > Wenjie Wang, Fuli Feng, Xiangnan He, Liqiang Nie, Tat-Seng Chua.
 
 ## Environment
