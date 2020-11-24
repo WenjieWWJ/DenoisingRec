@@ -17,7 +17,7 @@ import data_utils
 from loss import loss_function
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--dataset', 
+parser.add_argument('--dataset',
 	type = str,
 	help = 'dataset used for training, options: amazon_book, yelp, adressa',
 	default = 'amazon_book')
@@ -26,7 +26,7 @@ parser.add_argument('--model',
 	help = 'model used for training. options: GMF, NeuMF-end',
 	default = 'GMF')
 parser.add_argument('--alpha', 
-	type = int, 
+	type = float, 
 	default = 0.2, 
 	help='hyperparameter in loss function')
 parser.add_argument("--lr", 
@@ -47,11 +47,11 @@ parser.add_argument("--epochs",
 	help="training epoches")
 parser.add_argument("--eval_freq", 
 	type=int,
-	default=2000,
+	default=100,
 	help="the freq of eval")
 parser.add_argument("--top_k", 
-	type=list, 
-	default=[50, 100],
+	type=list,
+	default=[3, 20],
 	help="compute metrics@top_k")
 parser.add_argument("--factor_num", 
 	type=int,

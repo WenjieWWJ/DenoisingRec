@@ -1,0 +1,22 @@
+arguments: Namespace(alpha=0.2, batch_size=1024, dataset='adressa', dropout=0.0, epochs=10, eval_freq=2000, factor_num=32, gpu='7', lr=0.001, model='GMF', num_layers=3, num_ng=1, out=True, top_k=[3, 20]) 
+config model GMF
+config data path ../data/adressa/
+config model path ./models/adressa/
+user, item num
+212231 6596
+data loaded! user_num:212231, item_num:6596 train_data_len:419491 test_user_num:10380
+/storage/wjwang/anaconda3/lib/python3.7/site-packages/torch/nn/_reduction.py:43: UserWarning: size_average and reduce args will be deprecated, please use reduction='none' instead.
+  warnings.warn(warning.format(ret))
+epoch: 2, iter: 2000, loss:0.07106870412826538
+################### EVAL ######################
+Eval loss:50.96217346191406
+epoch: 4, iter: 4000, loss:0.053623002022504807
+################### EVAL ######################
+Eval loss:52.207698822021484
+epoch: 7, iter: 6000, loss:0.04842742159962654
+################### EVAL ######################
+Eval loss:52.72333908081055
+epoch: 9, iter: 8000, loss:0.05175017938017845
+################### EVAL ######################
+Eval loss:53.788917541503906
+############################## Training End. ##############################
