@@ -45,7 +45,7 @@ python main.py --dataset=yelp --model=GMF --drop_rate=0.1 --num_gradual=30000 --
 ```
 2. Train NeuMF by R_CE on Amazon_book
 ```
-python main.py --dataset=yelp --model=NeuMF-end --alpha=_0.25 --gpu=0
+python main.py --dataset=amazon_book --model=NeuMF-end --alpha=_0.25 --gpu=0
 ```
 We release all training logs in ./log folder. The hyperparameter settings can be found in the log file. 
 The well-trained parameter files are too big to upload to Github. I will upload to drives later and share it here.
