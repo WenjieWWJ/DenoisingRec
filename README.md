@@ -67,6 +67,8 @@ Thanks to the NCF implementation:
 - [Tensorflow Version](https://github.com/hexiangnan/neural_collaborative_filtering) from Xiangnan He. 
 - [Torch Version](https://github.com/guoyang9/NCF) from Yangyang Guo.
 
+Besides, this research is supported by the National Research Foundation, Singapore under its International Research Centres in Singapore Funding Initiative, and the National Natural Science Foundation of China (61972372, U19A2079). Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not reflect the views of National Research Foundation, Singapore. 
+
 ## License
 
 NUS © [NExT++](https://nextcenter.org/)
