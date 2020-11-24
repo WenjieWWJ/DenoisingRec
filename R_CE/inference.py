@@ -24,14 +24,10 @@ parser.add_argument('--model',
 	type = str,
 	help = 'model used for training. options: GMF, NeuMF-end',
 	default = 'GMF')
-parser.add_argument('--drop_rate', 
+parser.add_argument('--alpha', 
 	type = float,
-	help = 'drop rate',
+	help = 'alpha',
 	default = 0.2)
-parser.add_argument('--num_gradual', 
-	type = int, 
-	default = 30000,
-	help='how many epochs for linear drop rate {5, 10, 15}')
 parser.add_argument("--top_k", 
 	type=list, 
 	default=[50, 100],
@@ -63,7 +59,7 @@ test_loader = data.DataLoader(test_dataset,
 print("data loaded! user_num:{}, item_num:{} test_data_len:{}".format(user_num, item_num, len(test_data)//(args.test_num_ng+1)))
 
 ########################### CREATE MODEL #################################
-test_model = torch.load('{}{}_{}-{}.pth'.format(model_path, args.model, args.drop_rate, args.num_gradual))
+test_model = torch.load('{}{}_{}.pth'.format(model_path, args.model, args.alpha))
 test_model.cuda()
 
 def test(model, test_data_pos, user_pos):
