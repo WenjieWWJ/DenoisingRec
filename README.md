@@ -61,6 +61,11 @@ If you use our code, please kindly cite:
   year={2020}
 }
 ```
+## Acknowledgment
+
+Thanks to the NCF implementation:
+- [Tensorflow Version](https://github.com/hexiangnan/neural_collaborative_filtering) from Xiangnan He. 
+- [Torch Version](https://github.com/guoyang9/NCF) from Yangyang Guo.
 
 ## License
 
