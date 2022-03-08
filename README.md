@@ -54,11 +54,13 @@ The well-trained parameter files are too big to upload to Github. I will upload 
 If you use our code, please kindly cite:
 
 ```
-@article{wang2020denoising,
-  title={Denoising Implicit Feedback for Recommendation},
+@inproceedings{wang2021denoising,
+  title={Denoising implicit feedback for recommendation},
   author={Wang, Wenjie and Feng, Fuli and He, Xiangnan and Nie, Liqiang and Chua, Tat-Seng},
-  journal={arXiv preprint arXiv:2006.04153},
-  year={2020}
+  booktitle={Proceedings of the 14th ACM international conference on web search and data mining},
+  pages={373--381},
+  publisher={ACM},
+  year={2021}
 }
 ```
 ## Acknowledgment
